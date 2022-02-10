@@ -32,14 +32,17 @@ def flatten_dict(innerElement, separator='.', prefix=''):
         prefix: innerElement}
 
 
-cli = click.Group()
+@click.group()
+def cli():
+    """CLI Application to query CouchBD"""
+    click.echo(f"starting...")
 
 
 @cli.command()
 @click.option('--address', '-a', default='127.0.0.1:8091', required=True, prompt="cluster address or ip ")
 @click.option('--username', '-u', default='Administrator', required=True, prompt="username ")
 @click.option('--password', '-p', required=True, prompt="password ")
-def configure(address, username, password):
+def configure(debug, address, username, password):
     """stores user connection preferences"""
     set_config(section='CLUSTER', option="address", value=address)
     set_config(section='CLUSTER', option="username", value=username)
@@ -49,15 +52,15 @@ def configure(address, username, password):
     username = get_config(section='CLUSTER', option="username")
     password = get_config(section='CLUSTER', option="password")
 
-    click.secho(f"DEBUG: saved configs: {address}, {username}, {password}", fg='green')
+    if debug:
+        click.secho(f"DEBUG: saved configs: {address}, {username}, {password}", fg='green')
 
 
 @cli.command()
 @click.option('--address', '-a', required=False)
 @click.option('--username', '-u', required=False)
 @click.option('--password', '-p', required=False)
-@click.option('--query', '-q', default='select * from \`travel-simple\`.inventory.airport limit 10', required=True,
-              prompt="query ")
+@click.option('--query', '-q', required=True)
 def execute(address, username, password, query):
     """executes N1QL query and displays results """
     if not username:
