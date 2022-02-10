@@ -23,7 +23,6 @@ _please see https://docs.couchbase.com/python-sdk/current/hello-world/start-usin
    - virtualenv --python=python3.7 venv 
    - source venv/bin/activate
    - sudo -H python3 -m pip install couchbase (macOs) or python3 -m pip install couchbase (ubuntu)
-   - source venv/bin/activate
    - pip3 install --editable .
 
 ### Using App
