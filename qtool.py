@@ -42,7 +42,7 @@ def cli():
 @click.option('--address', '-a', default='127.0.0.1:8091', required=True, prompt="cluster address or ip ")
 @click.option('--username', '-u', default='Administrator', required=True, prompt="username ")
 @click.option('--password', '-p', required=True, prompt="password ")
-def configure(debug, address, username, password):
+def configure(address, username, password):
     """stores user connection preferences"""
     set_config(section='CLUSTER', option="address", value=address)
     set_config(section='CLUSTER', option="username", value=username)
