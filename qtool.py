@@ -52,8 +52,8 @@ def configure(address, username, password):
     username = get_config(section='CLUSTER', option="username")
     password = get_config(section='CLUSTER', option="password")
 
-    if debug:
-        click.secho(f"DEBUG: saved configs: {address}, {username}, {password}", fg='green')
+    
+    click.secho(f"saved configs: {address}, {username}, {password}", fg='green')
 
 
 @cli.command()
