@@ -11,21 +11,19 @@ _please see https://docs.couchbase.com/python-sdk/current/hello-world/start-usin
    - brew update
    - brew install openssl
    - pip3 install virtualenv
-   - virtualenv --python=python3.7 venv 
-   - source venv/bin/activate
-   - sudo -H python3 -m pip install couchbase
 
  - **Ubuntu 20.1 LTS**
    - python3 -m pip install --upgrade pip setuptools wheel
    - sudo apt-get install git-all python3-dev python3-pip python3-setuptools cmake build-essential
    - sudo apt-get install libssl-dev
    - virtualenv --python=python3.7 venv 
-   - source venv/bin/activate
-   - python3 -m pip install couchbase
 
 ### Simple Query Tool App Installation
    - git clone https://github.com/rsavalagi/cli-project.git
    - cd cli-project
+   - virtualenv --python=python3.7 venv 
+   - source venv/bin/activate
+   - sudo -H python3 -m pip install couchbase (macOs) or python3 -m pip install couchbase (ubuntu)
    - source venv/bin/activate
    - pip3 install --editable .
 
