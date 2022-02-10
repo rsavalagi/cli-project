@@ -85,8 +85,10 @@ def execute(address, username, password, query):
             click.secho(f"{query}", fg='yellow')
             result = cluster.query(query, QueryOptions(metrics=True))
 
+            click.secho(f"\n")
             rows = [flatten_dict(row) for row in result.rows()]
-            click.secho(tabulate.tabulate(rows, headers='keys', tablefmt='csv', showindex=True), fg='blue')
+
+            click.secho(tabulate.tabulate(rows, headers='keys', tablefmt='csv', showindex=True), fg='white')
 
             click.secho(f"\n{result.metadata().metrics().execution_time()}", fg='yellow')
 
