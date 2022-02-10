@@ -5,7 +5,7 @@ clic project to query couchbase db
  - **MacOS 12**
  - **Ubuntu 20.1 LTS**
 
-### Python SDK Installation
+### Python SDK Installation pre-requisites
 _please see https://docs.couchbase.com/python-sdk/current/hello-world/start-using-sdk.html for details_
  - **MacOS**
    - brew update
@@ -16,7 +16,7 @@ _please see https://docs.couchbase.com/python-sdk/current/hello-world/start-usin
    - python3 -m pip install --upgrade pip setuptools wheel
    - sudo apt-get install git-all python3-dev python3-pip python3-setuptools cmake build-essential
    - sudo apt-get install libssl-dev
-   - virtualenv --python=python3.7 venv 
+   - pip3 install virtualenv
 
 ### Simple Query Tool App Installation
    - git clone https://github.com/rsavalagi/cli-project.git
