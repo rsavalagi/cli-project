@@ -7,7 +7,8 @@ setup(
     install_requires=[
         'Click',
         'tabulate',
-        'configparser'
+        'configparser',
+        'click'
 
     ],
     entry_points='''
