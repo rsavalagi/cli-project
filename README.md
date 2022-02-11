@@ -1,5 +1,5 @@
 ## cli-project
-clic project to query couchbase db
+cli project to query couchbase db
 
 ### Platforms tested and verified as working
  - **MacOS 12**
