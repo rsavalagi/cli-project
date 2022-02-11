@@ -16,7 +16,7 @@ _please see https://docs.couchbase.com/python-sdk/current/hello-world/start-usin
    - sudo apt-get install git-all python3-dev python3-pip python3-setuptools cmake build-essential
    - sudo apt-get install libssl-dev
 
-### Simple Query Tool App Installation
+### Simple Query Tool App Installation alogn with dependencies
    - git clone https://github.com/rsavalagi/cli-project.git
    - cd cli-project
    - pip3 install virtualenv
