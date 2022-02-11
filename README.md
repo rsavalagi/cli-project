@@ -25,6 +25,12 @@ _please see https://docs.couchbase.com/python-sdk/current/hello-world/start-usin
    - sudo -H python3 -m pip install couchbase (macOs) or python3 -m pip install couchbase (ubuntu)
    - pip3 install --editable .
 
+## creating a distribution
+ - cd cli-project
+ - source venv/bin/activate
+ - pip install pyinstaller
+ - pyinstaller qtool.py
+
 ### Using App
 **inline configuration**
 
@@ -43,8 +49,6 @@ _cluster address or ip  [127.0.0.1:8091]:_
 _username  [Administrator]:_
 
 _password : Admin123$_
-
-
 
 
 
